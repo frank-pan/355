@@ -1,0 +1,41 @@
+!DOCTYPE html
+html
+head
+    meta charset=utf-8
+    meta http-equiv=X-UA-Compatible content=IE=edge
+    titlesorttitle
+    script
+        const json = [];
+
+        function printInputValue() {
+            var name = document.getElementById(name).value;
+            var score = document.getElementById(score).value;
+
+            var s = [name, parseFloat(score)];
+
+            json.push(s);
+            console.log(json);
+
+            json.sort(sortscore);
+            sortedname = [];
+            ![CDATA[
+            for (var i = 0; i  json.length; i ++){
+                 sortedname.push(br + json[i][0]);
+            }
+            ]]
+            document.getElementById(demo2).innerHTML = sorted name  + sortedname;
+             document.getElementById(demo2).innerHTML = ;
+        }
+        
+        function sortscore(a, b) {
+            return a[1] - b[1];
+        }
+    script
+head
+body
+    nameinput type=text id=namebr
+    scoreinput type=text id=scorebr
+    button onclick=printInputValue()submitbutton
+    p id=demo2p
+body
+html
