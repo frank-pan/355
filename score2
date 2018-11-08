@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sort</title>
+    <script>
+        const json = [['Apple', 84], ['Dell', 82], ['Levi\'s', 96], ['C&A', 69],
+                        ['Nike', 68], ['Primark', 64], ['H&M', 62.5], ['Sansum', 62.5],
+                        ['Inditex', 61], ['Target', 60.8], ['Esprit', 60], ['New Balance', 60],
+                        ['M&S', 59], ['Adidas', 59], ['Gap', 59], ['Puma', 59], ['Panasonic', 56.5],
+                        ['Foxconn', 56], ['Esquel', 50.5], ['Philips', 50.5]];
+
+        json.sort(sortscore);
+        
+        function printInputValue() {
+            var name = document.getElementById("name").value;
+            
+            //<![CDATA[
+            for (var i = 0; i < json.length; i ++){
+                 if (json[i][0] == name){
+                     document.getElementById("demo2").innerHTML = i+1 + " " +  name + ": " + json[i][1];
+                 }
+            }
+            //]]>
+
+        }
+
+        function sortscore(a, b) {
+            return b[1] - a[1];
+        }
+    </script>
+</head>
+<body>
+    name:<input type="text" id="name"><br>
+    <button onclick="printInputValue()">submit</button>
+    <p id="demo2"></p>
+</body>
+</html>
